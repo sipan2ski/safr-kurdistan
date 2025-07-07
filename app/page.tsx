@@ -52,7 +52,7 @@ const getCities = (lang: Language) => [
   getTranslation(lang, "sulaymaniyah"),
 ]
 
-export default function HouseBookingPage({ searchParams }: { searchParams?: { [key: string]: string | string[] | undefined } }) {
+export default function HouseBookingPage() {
   const [language, setLanguage] = useState<Language>("en")
   const [searchArea, setSearchArea] = useState(getTranslation(language, "allAreas"))
   const [searchCity, setSearchCity] = useState(getTranslation(language, "allCities"))
