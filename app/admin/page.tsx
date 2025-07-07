@@ -8,7 +8,7 @@ import { AdminLogin } from "@/components/admin-login"
 import { AdminDashboard } from "@/components/admin-dashboard"
 import { AdminAuthService, type AdminAuthState } from "@/lib/admin-auth"
 
-export default function AdminPage() {
+export default function AdminPage({ searchParams }: { searchParams?: { [key: string]: string | string[] | undefined } }) {
   const [authState, setAuthState] = useState<AdminAuthState>({ admin: null, isAuthenticated: false })
   const [showLogin, setShowLogin] = useState(false)
   const [showDashboard, setShowDashboard] = useState(false)
